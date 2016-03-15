@@ -18,6 +18,7 @@
 			<ul id="tabs">
 				<li id="todo-tab" class="selected"><a href="index.php">To-Do</a></li>
 				<li id="todo-tab" class="selected"><a href="newitem.php">New Item</a></li>
+				
 				<div id="response"></div>
 
 
@@ -36,13 +37,13 @@
 								$id = $a["id"];
 								echo '<div class="item">';
 								
-									echo '<h4><form method="POST">
-  								             <a href="done.php?id='.$id.'">done</a>
-  											</form>'.$title.'</h4>';
+									echo '<h4>
+  								             
+  											'.$title.'</h4>';
 									echo'<p>'.$description.'</p>';
 									echo'<input type="hidden" nam="id" id="id" value="$id"/>';
 									echo'<div class="options">';
-										echo'<a class="deleteEntryAnchor" href="delete.php?id='.$id.'">D</a>';
+										echo'<a href="done.php?id='.$id.'" id="abc">done</a><a class="deleteEntryAnchor" href="delete.php?id='.$id.'">D</a>';
 										
 									echo'</div>';
 							}// end of while

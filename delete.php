@@ -8,6 +8,7 @@
 	$i=$_GET["id"];
 	//echo $i;
 	mysql_query("DELETE  FROM todo WHERE id = '$i'");
+	header("Location:index.php");
 	//die();
 
 ?>
